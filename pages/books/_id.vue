@@ -10,15 +10,15 @@
         <h2>书名： {{ book.title }} </h2>
         <img v-bind:src="book.image" alt="">
         <p>价格：{{book.price}}</p>
-        <p>出版时间：{{book.price}}</p>
-        <p>出版社：{{book.price}}</p>
-        <p>总结：{{book.price}}</p>
+        <p>出版时间：{{book.pubdate}}</p>
+        <p>出版社：{{book.publisher}}</p>
+        <p>总结：{{book.summary}}</p>
         <p>价格：{{book.price}}</p>
         <p>作者：{{book.author[0]}}</p>
         <p>作者介绍：{{book.author_intro}}</p>
 
         <p>简介：</p>
-        <div class="">
+        <div>
           {{ book.catalog }}
         </div>
       </el-col>
@@ -29,6 +29,8 @@
  <script type="text/javascript">
   // let axios = require('axios')
   import axios from '~/plugins/axios'
+  import Vue from 'Vue'
+
 
   export default {
     name: 'id',

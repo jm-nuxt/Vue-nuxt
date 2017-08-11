@@ -17,7 +17,7 @@
 import axios from '~/plugins/axios'
 
 export default {
-  name: 'id',
+  name: 'book-id',
   asyncData ({ params, error }) {
     return axios.get('/api/users/' + params.id)
       .then((res) => {

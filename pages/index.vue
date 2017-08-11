@@ -7,13 +7,13 @@
 
     <router-link to="/shops">店铺列表页面</router-link>
 
-    <ul class="users">
+    <!-- <ul class="users">
       <li v-for="(user, index) in users" :key="index" class="user">
         <nuxt-link :to="{ name: 'id', params: { id: index }}">
           {{ user.name }}
         </nuxt-link>
       </li>
-    </ul>
+    </ul> -->
   </section>
 </template>
 
@@ -22,9 +22,9 @@ import axios from '~/plugins/axios'
 
 export default {
   async asyncData () {
-    let { data } = await axios.get('/api/users')
-    console.log(123)
-    return { users: data }
+    // let { data } = await axios.get('/api/users')
+    // console.log(123)
+    // return { users: data }
   },
   head () {
     return {

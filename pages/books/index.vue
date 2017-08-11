@@ -1,6 +1,6 @@
 <template id="products">
   <section>
-
+    <nuxt-link to="/">回到首页</nuxt-link>
     <el-row>
       <el-col :span="24">
         <h2>商品列表页面</h2>
@@ -13,10 +13,9 @@
       </el-col>
       <el-col :span="18">
         <ul>
-          <li v-for="(product, index) in products" :key="index">
-            <nuxt-link :to="{ name: 'shops-id', params: { id: product.id }}">
-              <span>{{ product.name }} - {{product.phone}}</span>
-              <time>{{ product.time }}</time>
+          <li v-for="(book, index) in books" :key="index">
+            <nuxt-link :to="{ name: 'books-id', params: { id: book.id }}">
+              <span>{{ book.title }}</span>
             </nuxt-link>
           </li>
         </ul>
@@ -43,10 +42,11 @@
     // 异步数据获取
     async asyncData (context) {
       try {
-        let url = `/restapi/shopping/restaurants?extras%5B%5D=activities&geohash=wtmkps3fh90&latitude=30.25807&limit=24&longitude=120.215&offset=0&terminal=web`
+        let url = `/v2/book/search?q=python&fields=id,title`
         const { data } = await axios.get(url)
+        console.log(data.books)
         return {
-          products: data
+          books: data.books
         }
       } catch (err) {
         console.log(err)

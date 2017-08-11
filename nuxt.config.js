@@ -27,9 +27,9 @@ module.exports = {
     ['@nuxtjs/proxy']
   ],
   proxy: {
-    '/restapi': {
-      target: 'https://www.ele.me',
-      ws: false
+    '/v2': {
+      target: 'https://api.douban.com',
+      ws: false,
       // changeOrigin: true
     }
   },

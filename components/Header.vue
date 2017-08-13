@@ -13,7 +13,7 @@
         </el-menu-item>
 
         <el-menu-item index="3">
-            <nuxt-link to="/music">音乐</nuxt-link>
+            <nuxt-link to="/music?q=张国荣">音乐</nuxt-link>
         </el-menu-item>
 
         <!--<el-menu-item>-->

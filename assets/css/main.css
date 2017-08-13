@@ -26,3 +26,6 @@ a, a:hover, a:focus, a:visited
   max-width: 400px;
   max-height: 289px;
 }
+li{
+  list-style: none;
+}

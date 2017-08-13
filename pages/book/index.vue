@@ -15,7 +15,7 @@
       <el-col :span="18">
 
         <el-input
-          placeholder="请选择日期"
+          placeholder="请输入关键字搜索图书"
           icon="search"
           v-model="bookName"
           :on-icon-click="searchBooks">
@@ -23,7 +23,7 @@
 
         <ul>
           <li v-for="(book, index) in books" :key="index">
-            <nuxt-link :to="{ name: 'books-id', params: { id: book.id }}">
+            <nuxt-link :to="{ name: 'book-id', params: { id: book.id }}">
               <span>{{ book.title }}</span>
             </nuxt-link>
           </li>
@@ -34,7 +34,6 @@
 </template>
 
 <script type="text/javascript">
-  // let axios = require('axios')
   import axios from '~/plugins/axios'
   export default {
     layout: 'products',

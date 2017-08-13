@@ -5,7 +5,7 @@
       USERS
     </h1>
 
-    <router-link to="/books">图书列表</router-link>
+
 
     <!-- <ul class="users">
       <li v-for="(user, index) in users" :key="index" class="user">

@@ -1,12 +1,7 @@
 <template id="books">
 <section class="books">
 
-  <el-row justify="center" type="flex">
-    <el-col :span="20">
-      <nuxt-link to="/">回到首页</nuxt-link>
-      <h2>商品列表页面</h2>
-    </el-col>
-  </el-row>
+  <h2>书籍</h2>
 
   <el-row>
     <el-col :span="6">
@@ -82,6 +77,19 @@ export default {
       }
     } catch (err) {
       console.log(err)
+    }
+  },
+
+  head () {
+    return {
+      title: 'Book',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Books description'
+        }
+      ]
     }
   }
 }

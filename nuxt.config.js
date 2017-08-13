@@ -33,6 +33,7 @@ module.exports = {
       // changeOrigin: true
     }
   },
+
   /*
    ** Global CSS
    */

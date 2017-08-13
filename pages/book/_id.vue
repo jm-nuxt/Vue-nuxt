@@ -30,7 +30,27 @@
   import axios from '~/plugins/axios'
 
   export default {
+    data(){
+
+    },
+    beforeRouteEnter(from, to, next){
+      next()
+    },
     name: 'book-id',
+    head() {
+      console.log(this.book)
+      return {
+        title: this.book.title,
+
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: `${this.book.title} - ${this.book.summary}`
+          }
+        ],
+      }
+    },
     async asyncData ({ params, error }) {
 
       return axios.get('/v2/book/' + params.id)

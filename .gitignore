@@ -3,6 +3,7 @@ node_modules
 
 # logs
 npm-debug.log
+*.log
 
 # Nuxt build
 .nuxt
@@ -12,3 +13,11 @@ dist
 
 # Backpack build
 build
+
+# ide
+.vscode
+.idea
+
+# 
+.DS_Store
+.svn

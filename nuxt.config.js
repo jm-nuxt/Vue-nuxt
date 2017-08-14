@@ -4,7 +4,8 @@ module.exports = {
    */
   head: {
     title: 'starter',
-    meta: [{
+    meta: [
+      {
         charset: 'utf-8'
       },
       {
@@ -17,11 +18,13 @@ module.exports = {
         content: 'Nuxt.js project'
       }
     ],
-    link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    }]
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      }
+    ]
   },
   modules: [
     ['@nuxtjs/proxy']
